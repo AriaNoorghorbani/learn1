@@ -1,0 +1,20 @@
+<hr>
+<div class="container"><label>Server Name:</label>
+<input class="form-control" (input)="vorodi($event)">
+</div><br>
+
+<div class="container"><label>Server Name:</label>
+    <input class="form-control" [(ngModel)]="neveshte">
+    </div><br>
+
+<div class="container">
+    <button class="btn btn-primary" (click)="onCreateServer()">Create a New Server</button>
+</div><br>
+
+<div class="container">
+{{ ServerSituation }}
+</div>
+
+<div class="container">
+    {{ neveshte }}
+</div>
