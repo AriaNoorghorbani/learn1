@@ -27,4 +27,9 @@
       this is add user
     </p>
   </app-adduser>
+</div><hr>
+<div class="container">
+ <p *ngIf="showText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum veritatis tempora, nesciunt minima iure adipisci debitis modi, atque, quis non ratione sed. Cum libero veritatis labore sint non dolor voluptate?</p>
+ <button class="btn btn-primary" (click)="onClickButton()">Show/Hide</button>  
+ <div *ngFor="let logItem of log">{{logItem}}</div>
 </div>

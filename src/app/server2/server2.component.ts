@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Server2Component implements OnInit {
 
-  serverName= 'server2'
-  isServerCreated= 'no any server created'
+  serverName= 'Testserver bid'
+  serverCreationStatus= 'no any server created'
   button: boolean = false;
-  directive = false;
+  serverCreated = false;
+  servers= ['testServer', 'testServer2'];
 
   constructor() { 
 setTimeout(() => {
@@ -25,9 +26,10 @@ setTimeout(() => {
     this.serverName = (<HTMLInputElement>event.target).value
   }
 
-  onClickButton(){
-    this.isServerCreated = this.serverName + ' server is created'
-    this.directive = true;
+  onCreateServer(){
+    this.serverCreated = true;
+    this.servers.push(this.serverName)
+    this.serverCreationStatus = this.serverName + ' server is created'
   }
 
 }
