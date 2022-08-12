@@ -10,6 +10,7 @@ export class Server2Component implements OnInit {
   serverName= 'server2'
   isServerCreated= 'no any server created'
   button: boolean = false;
+  directive = false;
 
   constructor() { 
 setTimeout(() => {
@@ -26,6 +27,7 @@ setTimeout(() => {
 
   onClickButton(){
     this.isServerCreated = this.serverName + ' server is created'
+    this.directive = true;
   }
 
 }

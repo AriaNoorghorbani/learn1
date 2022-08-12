@@ -4,5 +4,7 @@
 
 <button class="btn btn-primary" [disabled]="!button" (click)="onClickButton()">Add server</button>
 
-{{serverName}}<br>
-{{isServerCreated}}
+<br>{{serverName}}<br>
+<p *ngIf="directive === true">
+    {{isServerCreated}}
+</p>
