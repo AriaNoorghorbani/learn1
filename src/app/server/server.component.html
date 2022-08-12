@@ -1,8 +1,3 @@
-<!-- <button class="btn btn-primary" [disabled]="!thisOk">Click</button>
-<p>warning message</p>
-<label>ServerName:</label>
-<input type="text" class="form-control" (input)="onInputChange($event)">
-<input type="text" class="form-control" [(ngModel)]="serverName">
-<button class="btn btn-primary" (click)="onCreateServer()">Create Server</button>
-{{ serverName }}<br>
-{{ serverCreation }} -->
+server with {{serverId}} serverId is now {{serverStatus}}
+
+<p [ngStyle]="{backgroundColor: getColor()}">server with {{serverId}} is {{serverStatus}}</p>
