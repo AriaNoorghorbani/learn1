@@ -5,6 +5,11 @@
 <button class="btn btn-primary" [disabled]="!button" (click)="onClickButton()">Add server</button>
 
 <br>{{serverName}}<br>
-<p *ngIf="directive === true">
+<p *ngIf="directive === true; else noServer">
     {{isServerCreated}}
 </p>
+<ng-template #noServer>
+    <p>
+        no server is created
+    </p>
+</ng-template>
