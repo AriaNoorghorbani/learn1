@@ -12,7 +12,9 @@ export class AppComponent {
 
   onClickButton(){
   this.showText = !this.showText;
-  this.log.push(this.log.length + 1)
+  // this.log.push(this.log.length + 1)
+  this.log.push(new Date())
+
   }
 }
 

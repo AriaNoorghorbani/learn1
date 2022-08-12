@@ -29,7 +29,12 @@
   </app-adduser>
 </div><hr>
 <div class="container">
- <p *ngIf="showText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum veritatis tempora, nesciunt minima iure adipisci debitis modi, atque, quis non ratione sed. Cum libero veritatis labore sint non dolor voluptate?</p>
- <button class="btn btn-primary" (click)="onClickButton()">Show/Hide</button>  
- <div *ngFor="let logItem of log">{{logItem}}</div>
+  <!-- <button class="btn btn-primary" (click)="this.showText = !this.showText">Show/Hide</button>   -->
+  <button class="btn btn-primary" (click)="onClickButton()">Show/Hide</button>  
+  <p *ngIf="showText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum veritatis tempora, nesciunt minima iure adipisci debitis modi, atque, quis non ratione sed. Cum libero veritatis labore sint non dolor voluptate?</p>
+  <div 
+  *ngFor="let logItem of log; let i = index"
+  [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': i >= 4}"
+  >{{ logItem }}</div>
 </div>
